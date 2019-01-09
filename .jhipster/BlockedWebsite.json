@@ -1,0 +1,17 @@
+{
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "siteName",
+            "fieldType": "String"
+        }
+    ],
+    "dto": "no",
+    "searchEngine": false,
+    "service": "serviceClass",
+    "entityTableName": "blocked_website",
+    "jpaMetamodelFiltering": false,
+    "pagination": "infinite-scroll"
+}

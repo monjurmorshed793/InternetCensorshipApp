@@ -1,0 +1,54 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-censorship-status-heading">Create or edit a Censorship Status</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!censorshipStatus.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="censorshipStatus.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_ispId">Isp Id</label>
+                    <input type="text" class="form-control" name="ispId" id="field_ispId"
+                        [(ngModel)]="censorshipStatus.ispId" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_ispName">Isp Name</label>
+                    <input type="text" class="form-control" name="ispName" id="field_ispName"
+                        [(ngModel)]="censorshipStatus.ispName" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_ooniStatus">Ooni Status</label>
+                    <select class="form-control" name="ooniStatus" [(ngModel)]="censorshipStatus.ooniStatus" id="field_ooniStatus" >
+                        <option value="DNS">DNS</option>
+                        <option value="TCP_ID">TCP_ID</option>
+                        <option value="HTTP">HTTP</option>
+                        <option value="URL">URL</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_systemStatus">System Status</label>
+                    <select class="form-control" name="systemStatus" [(ngModel)]="censorshipStatus.systemStatus" id="field_systemStatus" >
+                        <option value=""></option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_description">Description</label>
+                    <input type="text" class="form-control" name="description" id="field_description"
+                        [(ngModel)]="censorshipStatus.description" />
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

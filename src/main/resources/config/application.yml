@@ -47,6 +47,8 @@ spring:
             enabled: false
     thymeleaf:
         mode: HTML
+    session:
+        timeout: 60000000000000000
 
 server:
     servlet:

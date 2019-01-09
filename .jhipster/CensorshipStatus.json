@@ -1,0 +1,35 @@
+{
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "ispId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ispName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ooniStatus",
+            "fieldType": "CensorshipType",
+            "fieldValues": "DNS,TCP_ID,HTTP,URL"
+        },
+        {
+            "fieldName": "systemStatus",
+            "fieldType": "CensorshipType",
+            "fieldValues": ""
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        }
+    ],
+    "dto": "no",
+    "searchEngine": false,
+    "service": "serviceClass",
+    "entityTableName": "censorship_status",
+    "jpaMetamodelFiltering": false,
+    "pagination": "infinite-scroll"
+}
